@@ -13,6 +13,7 @@ body {
   margin: 0 auto;
   padding: 0 22px; }
 
+/* -------------------- top bar -------------------- */
 .top-bar {
   display: flex;
   justify-content: space-between; }
@@ -64,7 +65,7 @@ header {
   top: 15px;
   z-index: 1; }
 
-/* ----- slider ---- */
+/* -------------------- slider -------------------- */
 .slider-section {
   background: white;
   background: -webkit-linear-gradient(top, white, #646464);
@@ -123,7 +124,7 @@ header {
   font-style: italic;
   max-width: 60%; }
 
-/* animacja */
+/* -------------------- slider animation -------------------- */
 .slider-slide {
   opacity: 0;
   transition: 0.4s all; }
@@ -231,19 +232,21 @@ header {
 .slider-dots-button:focus {
   outline: none; }
 
-.green_button {
-  background-color: #27c7ab;
-  color: white;
-  text-align: center;
+button, input[type="button"] {
+  background-color: #24ba9f;
+  padding: 12px 44px;
   text-transform: uppercase;
-  width: 200px;
-  padding: 10px 30px;
-  font-size: 17px;
-  font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
-  margin-top: 20px;
-  border-radius: 8px;
-  text-decoration: none; }
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Raleway', 'Tahoma', 'Arial', sans-serif;
+  font-size: 22px; }
 
+button {
+  transition: 0.3s; }
+
+/* -------------------- small boxes -------------------- */
 .boxes {
   display: flex;
   justify-content: space-between; }
@@ -263,3 +266,115 @@ header {
     border: 2px solid #c2c2c2;
     display: flex;
     flex-direction: column; }
+
+hr {
+  background-color: #24ba9f;
+  height: 7px;
+  border: none;
+  margin: 7px 0; }
+
+.small-box hr {
+  width: 48%; }
+
+/* -------------------- prices -------------------- */
+.prices {
+  background-color: #f1f1f1;
+  margin-top: 45px;
+  padding-top: 38px; }
+  .prices hr {
+    width: calc(33.333% - 16px); }
+  .prices .price-box {
+    background-color: #fff;
+    width: calc(33.333% - 16px);
+    height: 462px;
+    border: 2px solid #c2c2c2;
+    float: left;
+    text-align: center;
+    color: #c2c2c2;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-top: 26px;
+    position: relative; }
+    .prices .price-box:nth-of-type(2) {
+      background-color: #27c7ab;
+      border: 2px solid #27c7ab;
+      margin-left: 24px;
+      margin-right: 24px; }
+      .prices .price-box:nth-of-type(2) .wheel {
+        background-color: #fff;
+        border: 12px solid #27c7ab;
+        box-shadow: 0 0 0 2px #27c7ab; }
+      .prices .price-box:nth-of-type(2) h2 {
+        color: #fff; }
+      .prices .price-box:nth-of-type(2) .circle {
+        border: 2px solid #27c7ab;
+        color: #27c7ab; }
+      .prices .price-box:nth-of-type(2) button {
+        color: #27c7ab;
+        background-color: #fff; }
+        .prices .price-box:nth-of-type(2) button:hover {
+          background-color: #008d75;
+          color: #fff; }
+      .prices .price-box:nth-of-type(2) > p:nth-of-type(2n + 1) {
+        background-color: #fff; }
+    .prices .price-box .wheel {
+      width: 24px;
+      height: 24px;
+      background-color: #c2c2c2;
+      border: 12px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #c2c2c2;
+      position: absolute;
+      top: -34px;
+      left: 130px;
+      box-sizing: content-box; }
+    .prices .price-box h2 {
+      color: #27c7ab; }
+    .prices .price-box > p {
+      font-size: 22px;
+      padding: 8px 0;
+      color: #959595; }
+      .prices .price-box > p:nth-of-type(2n) {
+        background-color: #f1f1f1; }
+      .prices .price-box > p:nth-of-type(2n + 1) {
+        background-color: #e4e4e4; }
+    .prices .price-box button {
+      font-size: 14px;
+      padding: 8px 28px;
+      position: absolute;
+      bottom: 16px;
+      left: 97px;
+      border-radius: 6px;
+      font-weight: 500; }
+      .prices .price-box button:hover {
+        background-color: #f1f1f1;
+        color: #008d75; }
+  .prices .circle {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #c2c2c2;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 25px auto;
+    position: relative; }
+    .prices .circle p:first-of-type {
+      font-size: 45px;
+      font-weight: 700;
+      margin-top: 20px; }
+    .prices .circle p:last-of-type {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 2px;
+      text-transform: uppercase; }
+    .prices .circle sup {
+      font-size: 16px;
+      position: relative;
+      top: -8px; }
+
+section h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px; }
+
+.contact hr {
+  width: calc(33.333% - 16px); }

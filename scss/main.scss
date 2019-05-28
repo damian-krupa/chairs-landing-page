@@ -16,7 +16,7 @@ body {
   padding: 0 22px;
 }
 
-// top bar
+/* -------------------- top bar -------------------- */
 
 .top-bar {
   display: flex;
@@ -82,7 +82,8 @@ header {
   z-index: 1;
 }
 
-/* ----- slider ---- */
+/* -------------------- slider -------------------- */
+
 .slider-section {
   background: rgba(255, 255, 255, 1.0);
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1.0), rgba(100, 100, 100, 1.0));
@@ -148,7 +149,8 @@ header {
   max-width: 60%;
 }
 
-/* animacja */
+/* -------------------- slider animation -------------------- */
+
 .slider-slide {
   opacity: 0;
   transition: 0.4s all;
@@ -275,21 +277,23 @@ header {
   outline: none;
 }
 
-.green_button {
-  background-color: #27c7ab;
-  color: white;
-  text-align: center;
+button, input[type="button"] {
+  background-color: #24ba9f;
+  padding: 12px 44px;
   text-transform: uppercase;
-  width: 200px;
-  padding: 10px 30px;
-  font-size: 17px;
-  font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
-  margin-top: 20px;
-  border-radius: 8px;
-  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Raleway', 'Tahoma', 'Arial', sans-serif;
+  font-size: 22px;
 }
 
-// small boxes
+button {
+  transition: 0.3s;
+}
+
+/* -------------------- small boxes -------------------- */
 
 .boxes {
   display: flex;
@@ -319,3 +323,153 @@ header {
     flex-direction: column;
   }
 }
+
+hr {
+  background-color: #24ba9f;
+  height: 7px;
+  border: none;
+  margin: 7px 0;
+}
+
+.small-box hr {
+  width: 48%;
+}
+
+/* -------------------- prices -------------------- */
+
+//colors
+$seashell: #f1f1f1;
+$white: #fff;
+$color_silver_sand_approx: #c2c2c2;
+$color_shamrock_approx: #27c7ab;
+$color_mountain_mist_approx: #959595;
+$color_mercury_approx: #e4e4e4;
+$color_observatory_approx: #008d75;
+
+.prices {
+  background-color: $seashell;
+  margin-top: 45px;
+  padding-top: 38px;
+  hr {
+    width: calc(33.333% - 16px);
+  }
+  .price-box {
+    background-color: $white;
+    width: calc(33.333% - 16px);
+    height: 462px;
+    border: 2px solid $color_silver_sand_approx;
+    float: left;
+    text-align: center;
+    color: $color_silver_sand_approx;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-top: 26px;
+    position: relative;
+    &:nth-of-type(2) {
+      background-color: $color_shamrock_approx;
+      border: 2px solid $color_shamrock_approx;
+      margin-left: 24px;
+      margin-right: 24px;
+      .wheel {
+        background-color: $white;
+        border: 12px solid $color_shamrock_approx;
+        box-shadow: 0 0 0 2px $color_shamrock_approx;
+      }
+      h2 {
+        color: $white;
+      }
+      .circle {
+        border: 2px solid $color_shamrock_approx;
+        color: $color_shamrock_approx;
+      }
+      button {
+        color: $color_shamrock_approx;
+        background-color: $white;
+        &:hover {
+          background-color: $color_observatory_approx;
+          color: $white;
+        }
+      }
+      > p:nth-of-type(2n + 1) {
+        background-color: $white;
+      }
+    }
+    .wheel {
+      width: 24px;
+      height: 24px;
+      background-color: $color_silver_sand_approx;
+      border: 12px solid $white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px $color_silver_sand_approx;
+      position: absolute;
+      top: -34px;
+      left: 130px;
+      box-sizing: content-box;
+    }
+    h2 {
+      color: $color_shamrock_approx;
+    }
+    > p {
+      font-size: 22px;
+      padding: 8px 0;
+      color: $color_mountain_mist_approx;
+      &:nth-of-type(2n) {
+        background-color: $seashell;
+      }
+      &:nth-of-type(2n + 1) {
+        background-color: $color_mercury_approx;
+      }
+    }
+    button {
+      font-size: 14px;
+      padding: 8px 28px;
+      position: absolute;
+      bottom: 16px;
+      left: 97px;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 6px;
+      font-weight: 500;
+      &:hover {
+        background-color: $seashell;
+        color: $color_observatory_approx;
+      }
+    }
+  }
+  .circle {
+    width: 120px;
+    height: 120px;
+    border: 2px solid $color_silver_sand_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    background-color: $white;
+    margin: 25px auto;
+    position: relative;
+    p {
+      &:first-of-type {
+        font-size: 45px;
+        font-weight: 700;
+        margin-top: 20px;
+      }
+      &:last-of-type {
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 2px;
+        text-transform: uppercase;
+      }
+    }
+    sup {
+      font-size: 16px;
+      position: relative;
+      top: -8px;
+    }
+  }
+}
+section h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+}
+.contact hr {
+  width: calc(33.333% - 16px);
+}
+
