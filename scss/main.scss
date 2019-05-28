@@ -25,6 +25,14 @@ body {
   nav {
     padding-top: 5px
   }
+
+  h3 {
+    text-transform: uppercase;
+    span {
+      color: #24ba9f;
+    }
+  }
+
 }
 
 header {
@@ -277,22 +285,6 @@ header {
   outline: none;
 }
 
-button, input[type="button"] {
-  background-color: #24ba9f;
-  padding: 12px 44px;
-  text-transform: uppercase;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-family: 'Raleway', 'Tahoma', 'Arial', sans-serif;
-  font-size: 22px;
-}
-
-button {
-  transition: 0.3s;
-}
-
 /* -------------------- small boxes -------------------- */
 
 .boxes {
@@ -300,7 +292,7 @@ button {
   justify-content: space-between;
 }
 
-.chairs {
+.features {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -365,6 +357,18 @@ $color_observatory_approx: #008d75;
     margin-bottom: 60px;
     padding-top: 26px;
     position: relative;
+    button {
+      background-color: #24ba9f;
+      padding: 12px 44px;
+      text-transform: uppercase;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: 'Raleway', 'Tahoma', 'Arial', sans-serif;
+      font-size: 22px;
+      transition: 0.3s;
+    }
     &:nth-of-type(2) {
       background-color: $color_shamrock_approx;
       border: 2px solid $color_shamrock_approx;
@@ -426,12 +430,11 @@ $color_observatory_approx: #008d75;
       position: absolute;
       bottom: 16px;
       left: 97px;
-      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
       border-radius: 6px;
       font-weight: 500;
       &:hover {
-        background-color: $seashell;
-        color: $color_observatory_approx;
+        background-color: $color_observatory_approx;
+        color: $color_mercury_approx;
       }
     }
   }
@@ -439,7 +442,6 @@ $color_observatory_approx: #008d75;
     width: 120px;
     height: 120px;
     border: 2px solid $color_silver_sand_approx;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 50%;
     background-color: $white;
     margin: 25px auto;
@@ -472,4 +474,8 @@ section h2 {
 .contact hr {
   width: calc(33.333% - 16px);
 }
+
+/* -------------------- footer -------------------- */
+
+
 
