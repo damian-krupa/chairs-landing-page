@@ -1,2 +1,4 @@
 # chairs-landing-page
-example landing page built from ground-up. Work in progress.
+Example landing page built from ground-up using HTML, SASS and Vanilla JS.
+
+link: https://damian-krupa.github.io/chairs-landing-page
