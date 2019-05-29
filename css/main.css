@@ -381,3 +381,39 @@ section h2 {
   width: calc(33.333% - 16px); }
 
 /* -------------------- footer -------------------- */
+footer {
+  padding: 38px 0 45px 0; }
+  footer p {
+    color: #9c9c9c; }
+    footer p span {
+      font-weight: 700; }
+    footer p:first-child {
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-top: 12px;
+      float: left; }
+      footer p:first-child span {
+        padding-left: 12px;
+        font-weight: 400; }
+    footer p:last-of-type {
+      float: right;
+      font-size: 20px;
+      margin-left: 60px;
+      margin-top: 6px; }
+  footer .social-media {
+    float: right; }
+    footer .social-media ul {
+      list-style: none; }
+    footer .social-media li {
+      float: left;
+      width: 33px;
+      height: 33px;
+      margin-right: 5px; }
+    footer .social-media a img {
+      height: 100%;
+      width: auto;
+      -webkit-filter: grayscale(50%);
+      filter: grayscale(50%); }
+    footer .social-media a:hover img {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%); }
